@@ -1,14 +1,108 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>page</title>
+    <title>ポートフォリオ</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            // チェックボックスの取得
+            const btn = document.querySelector("#btn-mode");
+
+            // チェックした時の挙動
+            btn.addEventListener("change", () => {
+                if (btn.checked == true) {
+                    // ダークモード
+                    document.body.classList.remove("light-theme");
+                    document.body.classList.add("dark-theme");
+                } else {
+                    // ライトモード
+                    document.body.classList.remove("dark-theme");
+                    document.body.classList.add("light-theme");
+                }
+            });
+        }, false);
+
+    </script>
 </head>
+
 <body>
-    <p>Hello World!</p>
+    <input id="btn-mode" class="" type="checkbox"> ダークモード
+
+    <h2><u>自己PR</u></h2>
+    <p>
+        私はサッカーを高校生までやっていて、常にサッカーで上を目指して努力してきました。<br>
+        自主練習を毎日行ったりなどして、日々自分自身の弱点の改善に努めました。<br>
+        結果、中学時代はJリーグの下部組織に入団することができ、高校時代では3年間レギュラーを掴むことができました。<br>
+        この経験から、私の長所としては目標に向かって継続的に計画をもって努力できる継続的自立性があるところです。
+    </p>
+
+    <h2><u>基本情報</u></h2>
+    <p>
+        <ul>
+            <li>
+                <strong>名前</strong>
+                <p>齋藤聖弥（さいとうせいや）</p>
+            </li>
+            <li>
+                <strong>資格</strong>
+                <p>簿記</p>
+                <p>Mos</p>
+                <p>自動車免許</p>
+            </li>
+            <li>
+                <strong>組織</strong>
+                <p>東海大学</p>
+            </li>
+            <li>
+                <strong>趣味</strong>
+                <p>サッカー</p>
+                <p>筋トレ</p>
+            </li>
+            <li>
+                <strong>生年月日</strong>
+                <p>１９９８年１２月７日</p>
+            </li>
+        </ul>
+    </p>
+
+    <h2><u>自然言語</u></h2>
+    <ul>
+        <li>
+            <strong>日本語</strong>
+            <p>できる</p>
+        </li>
+        <li>
+            <strong>英語</strong>
+            <p>あいさつ程度</p>
+        </li>
+    </ul>
+
+    <h2><u>スキル</u></h2>
+    <ul>
+        <li>
+            <label>フロントエンド</label>
+            <ul>
+                <li>
+                    <label>マークアップ言語</label>
+                    <ul>
+                        <li>
+                            <label>HTML5</label>
+                        </li>
+                </li>
+            </ul>
+        <li>
+            <label>スタイルシート</label>
+            <ul>
+                <li>
+                    <label>CSS3</label>
+                </li>
+            </ul>
+        </li>
+    </ul>
 </body>
+
 </html>
